@@ -12,7 +12,7 @@ public class CategoryManager {
     private final Connection connection = DatabaseConnectionProvider.getConnector().getConnection();
 
     public Category getCategoryById(int id) {
-        String sql = "SELECT * FROM category WHERE id = ?";
+        String sql = "SELECT * FROM category WHERE id = ? order by id desc limit 20";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, id);
