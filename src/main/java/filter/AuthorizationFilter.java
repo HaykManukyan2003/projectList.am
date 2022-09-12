@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/item/remove", "/item/add"})
+@WebFilter(urlPatterns = {"/item/remove", "/item/add", "/myItems/Show"})
 public class AuthorizationFilter implements Filter {
 
     @Override
